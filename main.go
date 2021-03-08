@@ -21,6 +21,6 @@ func main() {
 
 	ctx := context.Background()
 	s := api.NewPokeAPI(ctx, *port, pokeservice)
-	log.Printf("POKEAPI available at /getPoke?id using port: %d", port)
+	log.Printf("POKEAPI available at /getPoke?id using port: %d", *port)
 	log.Fatalln(s.StartServer())
 }
